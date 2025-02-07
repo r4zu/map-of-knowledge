@@ -1,18 +1,13 @@
 # map_knowledge
 
-This template should help get you started developing with Vue 3 in Vite.
+## Overview
 
-## Recommended IDE Setup
+`map_knowledge` is a project designed to manage and visualize knowledge maps. It provides tools for setting up the project, compiling, and hot-reloading for development purposes.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Project Setup**: Install all necessary dependencies using `pnpm install`.
+- **Development**: Compile and hot-reload the project for development using `pnpm dev`.
 
 ## Project Setup
 
@@ -24,16 +19,4 @@ pnpm install
 
 ```sh
 pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
 ```
