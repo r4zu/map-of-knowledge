@@ -1,4 +1,4 @@
-# map_knowledge
+# Map of Knowledge
 
 ## Overview
 
