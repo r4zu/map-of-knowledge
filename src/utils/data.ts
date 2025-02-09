@@ -1,9 +1,16 @@
 const nodes: {
-  [key: string]: { id: number; name: string; description?: string; notDependency?: string[] }
+  [key: string]: {
+    id: number
+    name: string
+    icon?: string
+    description?: string
+    notDependency?: string[]
+  }
 } = {
   node0: {
     id: 1,
     name: '0. Foundations',
+    icon: 'foundation',
     description:
       'This learning path will provide you with the essential skills and knowledge you need in order to start learning ROS.',
     notDependency: [
@@ -39,6 +46,7 @@ const nodes: {
   node1: {
     id: 2,
     name: 'Linux for robotics',
+    icon: 'precision_manufacturing',
     description: "Learn the Linux fundamentals you'll need for robotics development",
     notDependency: [
       'node2',
@@ -77,6 +85,7 @@ const nodes: {
   node2: {
     id: 3,
     name: 'C++ Basics for robotics',
+    icon: 'precision_manufacturing',
     description: 'Master the basics of C++ for robot programming',
     notDependency: [
       'node1',
@@ -115,6 +124,7 @@ const nodes: {
   node3: {
     id: 4,
     name: 'Python 3 for robotics',
+    icon: 'precision_manufacturing',
     description: 'Master the basics of Python 3 for robot programming',
     notDependency: [
       'node1',
@@ -153,6 +163,7 @@ const nodes: {
   node4: {
     id: 5,
     name: '1. Basic ROS2',
+    icon: 'foundation',
     description:
       'This learning path will provide you with the essential skills and knowledge you need to understand and create any basic ROS related project.',
     notDependency: [
@@ -186,6 +197,7 @@ const nodes: {
   node5: {
     id: 6,
     name: '2. ROS Basics',
+    icon: 'foundation',
     description:
       'This learning path will provide you with the essential skills and knowledge you need to understand and create any basic ROS related project.',
     notDependency: [
@@ -225,6 +237,7 @@ const nodes: {
   node6: {
     id: 7,
     name: 'Gazebo Sim with ROS',
+    icon: 'precision_manufacturing',
     description:
       'Learn Gazebo Sim Garden, the new generation of simulation software from Open Robotics, and how to seamlessly use it with ROS2.',
     notDependency: [
@@ -264,6 +277,7 @@ const nodes: {
   node7: {
     id: 8,
     name: 'URDF robot modeling ROS2',
+    icon: 'precision_manufacturing',
     description: 'Understanding robot modeling using URDF',
     notDependency: [
       'node0',
@@ -302,6 +316,7 @@ const nodes: {
   node8: {
     id: 9,
     name: 'TF in ROS2',
+    icon: 'precision_manufacturing',
     description: 'To finally understand TF and Robot State Publisher in ROS',
     notDependency: [
       'node0',
@@ -340,6 +355,7 @@ const nodes: {
   node9: {
     id: 10,
     name: 'ROS2 Basics in 5 days (C++)',
+    icon: 'precision_manufacturing',
     description:
       "Learn ROS2 basics now. It doesn't matter if you are new to ROS or a veteran, ROS2 is here to stay.",
     notDependency: [
@@ -379,6 +395,7 @@ const nodes: {
   node10: {
     id: 11,
     name: 'ROS2 Basics in 5 days (Python)',
+    icon: 'precision_manufacturing',
     description: 'Learn the fundamentals of ROS to understand and be able to program robots.',
     notDependency: [
       'node0',
@@ -417,6 +434,7 @@ const nodes: {
   node11: {
     id: 12,
     name: 'ROS2 Basics in 3 days (Rust)',
+    icon: 'precision_manufacturing',
     description: 'Be at the forefront of robotics engineering by combining ROS2 and Rust.',
     notDependency: [
       'node0',
@@ -455,6 +473,7 @@ const nodes: {
   node12: {
     id: 13,
     name: '5. Navigation ROS2',
+    icon: 'foundation',
     description:
       'Building on your ROS basics skills and knowledge, learn how to navigate ROS-based robots.',
     notDependency: [
@@ -491,6 +510,7 @@ const nodes: {
   node13: {
     id: 14,
     name: '3. Intermediate ROS2',
+    icon: 'foundation',
     description:
       'This learning path will provide you with the essential skills and knowledge you need to understand and create any basic ROS2-related project.',
     notDependency: [
@@ -524,6 +544,7 @@ const nodes: {
   node14: {
     id: 15,
     name: 'RTAB',
+    icon: 'precision_manufacturing',
     description: 'Learn how to use the rtabmap_ros package for performing RGB-D SLAM',
     notDependency: [
       'node0',
@@ -562,6 +583,7 @@ const nodes: {
   node15: {
     id: 16,
     name: 'Nav2 Basics',
+    icon: 'precision_manufacturing',
     description: 'Learn how make robots autonomously navigate using Nav2',
     notDependency: [
       'node0',
@@ -600,6 +622,7 @@ const nodes: {
   node16: {
     id: 17,
     name: 'Nav Advanced',
+    icon: 'precision_manufacturing',
     description: 'Take a deeper look at Navigation for ROS2',
     notDependency: [
       'node0',
@@ -638,6 +661,7 @@ const nodes: {
   node17: {
     id: 18,
     name: 'ROS1 - ROS2 Migration',
+    icon: 'precision_manufacturing',
     description: 'Learn how to make your manipulator interact with the environment using ROS',
     notDependency: [
       'node0',
@@ -676,6 +700,7 @@ const nodes: {
   node18: {
     id: 19,
     name: 'Behavior Trees for ROS2',
+    icon: 'precision_manufacturing',
     description: 'Learn to use Behavior Trees in ROS2.',
     notDependency: [
       'node0',
@@ -714,6 +739,7 @@ const nodes: {
   node19: {
     id: 20,
     name: 'Advanced Modern C++ for Robotics',
+    icon: 'precision_manufacturing',
     notDependency: [
       'node0',
       'node1',
@@ -751,6 +777,7 @@ const nodes: {
   node20: {
     id: 21,
     name: 'Intermediate ROS2 (Python)',
+    icon: 'precision_manufacturing',
     notDependency: [
       'node0',
       'node1',
@@ -788,6 +815,7 @@ const nodes: {
   node21: {
     id: 22,
     name: 'Intermediate ROS2 (C++)',
+    icon: 'precision_manufacturing',
     description: 'Take your ROS2 knowledge to the next level.',
     notDependency: [
       'node0',
@@ -826,6 +854,7 @@ const nodes: {
   node22: {
     id: 23,
     name: 'ROS2 Control',
+    icon: 'precision_manufacturing',
     description: 'Understand ROS2 Control to add feedback control to your robot',
     notDependency: [
       'node0',
@@ -864,6 +893,7 @@ const nodes: {
   node23: {
     id: 24,
     name: 'ROS2 Security',
+    icon: 'precision_manufacturing',
     description: 'Learn to enable and manage security with ROS2',
     notDependency: [
       'node0',
@@ -902,6 +932,7 @@ const nodes: {
   node24: {
     id: 25,
     name: '4. Robotics Theory',
+    icon: 'foundation',
     description: 'Creating your first ROS based Robot from Scratch.',
     notDependency: [
       'node0',
@@ -941,6 +972,7 @@ const nodes: {
   node25: {
     id: 26,
     name: '14. Enterprise',
+    icon: 'foundation',
     description: 'Learn how DDS works for ROS2-based robots.',
     notDependency: [
       'node0',
@@ -980,6 +1012,7 @@ const nodes: {
   node26: {
     id: 27,
     name: '11. Course of product',
+    icon: 'foundation',
     description:
       'Learn robotics programming with Python and the Limo robot, covering sensors, actuators, and odometry in an immersive course.',
     notDependency: [
@@ -1019,6 +1052,7 @@ const nodes: {
   node27: {
     id: 28,
     name: '13. Simulation',
+    icon: 'foundation',
     description:
       'Learn Gazebo Sim Garden, the new generation of simulation software from Open Robotics, and how to seamlessly use it with ROS2.',
     notDependency: [
@@ -1059,6 +1093,7 @@ const nodes: {
   node28: {
     id: 29,
     name: '8. Robot Creation',
+    icon: 'foundation',
     description:
       'Master ROS2 and practical robotics with LIMO in a beginner-friendly, hands-on course.',
     notDependency: [
@@ -1099,6 +1134,7 @@ const nodes: {
   node29: {
     id: 30,
     name: '7. Manipulation',
+    icon: 'foundation',
     description: 'Master how to create ROS applications for autonomous mobile manipulators',
     notDependency: [
       'node0',
@@ -1138,6 +1174,7 @@ const nodes: {
   node30: {
     id: 31,
     name: '9. Artificial Intelligence',
+    icon: 'foundation',
     description: 'AI, AI for beginers, AI basics, probability',
     notDependency: [
       'node0',
@@ -1177,6 +1214,7 @@ const nodes: {
   node31: {
     id: 32,
     name: '10. ROS Debugging',
+    icon: 'foundation',
     description: 'This Course contains several ROS-related problems that need to be solved by you.',
     notDependency: [
       'node0',
@@ -1216,6 +1254,7 @@ const nodes: {
   node32: {
     id: 33,
     name: '12. Web Devel for Robots',
+    icon: 'foundation',
     description:
       'From the essential to advanced widgets, learn how to control and monitor robots with ROS using just your web browser, all on the web!',
     notDependency: [

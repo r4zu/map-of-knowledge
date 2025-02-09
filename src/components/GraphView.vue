@@ -47,8 +47,8 @@ const configs = reactive(
             .id((d: ForceNodeDatum) => d.id)
           return d3
             .forceSimulation(nodes)
-            .force('edge', forceLink.distance(100).strength(0.1))
-            .force('charge', d3.forceManyBody().strength(-2000))
+            .force('edge', forceLink.distance(1000).strength(0.01))
+            .force('charge', d3.forceManyBody().strength(-20000))
             .force('x', d3.forceX())
             .force('y', d3.forceY())
             .stop()
@@ -62,15 +62,17 @@ const configs = reactive(
           n.notDependency && n.notDependency.some((nd: string) => nd === nodeEdgeSelected.value)
             ? '#6666'
             : '#666',
-        radius: 10,
+        radius: 12,
       },
       hover: {
         color: 'orange',
+        strokeColor: '#000',
         strokeWidth: 2,
-        radius: 15,
+        radius: 16,
       },
       label: {
         visible: true,
+        directionAutoAdjustment: true,
       },
     },
     edge: {
@@ -101,7 +103,7 @@ const eventHandlers: vNG.EventHandlers = {
     nodeEdgeSelected.value = ''
     descriptionOpacity.value = 0
   },
-  'node:pointerdown': () => {
+  'node:click': () => {
     router.push('/about')
   },
 }
@@ -117,7 +119,35 @@ const eventHandlers: vNG.EventHandlers = {
       :edges="data.edges"
       :configs="configs"
       :eventHandlers="eventHandlers"
-    />
+    >
+      <defs>
+        <component v-bind:is="'style'">
+          @font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src:
+          url(https://fonts.gstatic.com/s/materialicons/v97/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)
+          format('woff2'); }
+        </component>
+      </defs>
+
+      <template #override-node="{ nodeId, scale, config, ...slotProps }">
+        <circle
+          :r="config.radius * scale"
+          :fill="config.color"
+          :stroke="config.strokeColor"
+          :stroke-width="config.strokeWidth * 3"
+          v-bind="slotProps"
+        />
+        <text
+          font-family="Material Icons"
+          :font-size="15 * scale"
+          fill="#ffffff"
+          text-anchor="middle"
+          dominant-baseline="central"
+          style="pointer-events: none"
+          :textContent="data.nodes[nodeId]?.icon ?? ''"
+        />
+      </template>
+    </v-network-graph>
+
     <div
       ref="description"
       class="description"
